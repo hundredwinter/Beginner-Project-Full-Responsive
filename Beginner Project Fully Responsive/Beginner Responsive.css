@@ -113,8 +113,10 @@
   }
 
   .navbar__menu {
-    display: /*grid*/grid;
-    grid-template-columns: auto;
+    display: /*grid*/flex;
+    /* grid-template-columns: auto; */
+    flex-direction: column;
+    align-items: center;
     margin: 0;
     width: 100%;
     position: absolute;
@@ -133,7 +135,7 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
-    height: 50vh;
+    height: 60vh;
     font-size: 1.6rem;
   }
 
@@ -145,7 +147,7 @@
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background: #fff;
   }
 
@@ -193,6 +195,7 @@
     width: 100%;
     height: 4px;
     background-color: #fff;
+    transition: transform 0.3s ease;
   }
 
   #mobile-menu.is-active .bar:nth-child(2) {
@@ -200,11 +203,11 @@
   }
 
   #mobile-menu.is-active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg);
   }
 
   #mobile-menu.is-active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
   }
 
 }
